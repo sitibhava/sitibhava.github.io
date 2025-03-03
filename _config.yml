@@ -10,21 +10,22 @@
 ############################
 
 # Name of website
-title: My website
+title: Bilingual Tipitaka Translated By AI
+#title-img: assets/img/thumb.png
 
 # Your name to show in the footer
-author: Some Person
+author: Someone
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  About Us: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - Aṭṭhakathā: "/attha"
+    - Tīka: "/tika"
+  Study Materials: "/"
 
 ################
 # --- Logo --- #
@@ -52,12 +53,12 @@ round-avatar: true
 social-network-links:
   email: "someone@example.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: "@daattali"
-  whatsapp: 15551212
+  facebook: sitibhava
+  github: sitibhava
+  twitter: sitibhava
+  patreon: sitibhava
+  youtube: "@sitibhava"
+  whatsapp: sitibhava
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
 #  linkedin: daattali
@@ -85,7 +86,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Sītibhāva uses AI to provide line-by-line translations of the Pali Tipitaka into English.
 
 ###########################
 # --- General options --- #
@@ -100,7 +101,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "sitibhava.com"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
