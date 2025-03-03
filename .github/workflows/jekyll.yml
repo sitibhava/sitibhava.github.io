@@ -1,5 +1,5 @@
 name: Beautiful Jekyll CI
-on: [push, pull_request]
+on: [push]  # Remove pull_request if you only want deployment on push
 jobs:
   build:
     name: Build Jekyll
@@ -24,3 +24,20 @@ jobs:
         run: bundle exec appraisal jekyll build --future --config _config_ci.yml,_config.yml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build  # Runs after the build job
+    runs-on: ubuntu-latest
+    # Only deploy on pushes to the default branch (e.g., master)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'  # Adjust if using 'main'
+    permissions:
+      pages: write      # Required to deploy to Pages
+      id-token: write   # Required for authentication
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
